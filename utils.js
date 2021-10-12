@@ -5,3 +5,7 @@ export function findById(id, items){
         }
     }
 }
+
+// export function renderLineItems(chickenData, cartItem){
+
+// }
