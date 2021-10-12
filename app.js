@@ -5,8 +5,8 @@ import { chickens } from './chicken.js';
 const chickenList = document.getElementById('chicken-list');
 
 for (let chicken of chickens){
-  const chickenCard = renderChicken(chicken);
-  chickenList.append(chickenCard);
+    const chickenCard = renderChicken(chicken);
+    chickenList.append(chickenCard);
 }
 
 

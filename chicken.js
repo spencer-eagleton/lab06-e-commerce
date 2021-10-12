@@ -5,14 +5,14 @@ export const chickens = [
         color: 'white',
         eggPerWeekAvg: '4',
         demeanor: 'exciteable',
-        img: './assets/whitechicken.png'},
+        img: './assets/whitechicken.png' },
     {
         id: '2',
         breed: 'RI Red',
         color: 'red',
         eggPerWeekAvg: '3',
         demeanor: 'laid-back',
-        img: './assets/redchicken.png'},
+        img: './assets/redchicken.png' },
     {
         id: '3',
         breed: 'Americana',
@@ -35,9 +35,9 @@ export const chickens = [
         color: 'grey',
         eggPerWeekAvg: '4',
         demeanor: 'exciteable',
-        img: "./assets/brownchicken.png"
+        img: './assets/brownchicken.png'
     }
 
     
 
-]
+];

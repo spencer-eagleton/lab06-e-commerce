@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { renderChicken } from "../render.js";
-import { chickens } from "../chicken.js";
+import { renderChicken } from '../render.js';
+import { chickens } from '../chicken.js';
 
 const test = QUnit.test;
 
@@ -9,7 +9,7 @@ test('renderChicken better return HTML snippet', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = 
-     `<div class="chicken-card"><img src="./assets/whitechicken.png"><h2>Leghorn</h2></div>`
+     `<div class="chicken-card"><img src="./assets/whitechicken.png"><h2>Leghorn</h2></div>`;
     
     //Act 
     // Call the function you're testing and set the result to a const
