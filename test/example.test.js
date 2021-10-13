@@ -2,7 +2,7 @@
 // import { example } from '../example.js';
 import { renderChicken } from '../render-chicken.js';
 import { chickens } from '../chicken.js';
-import { findById, getCart } from '../utils.js';
+import { findById, getCart, addItem } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -50,4 +50,39 @@ test('getCart should return cart if cart is available', (expect)=>{
     expect.deepEqual(cart, fakeCart);
 });
 
+test('getCart should return empty array if cart is not available', (expect)=>{
+    
+    localStorage.removeItem('CART');
+    const cart = getCart();
 
+    expect.deepEqual(cart, []);
+
+});
+
+test('addItem should add 1 to quantity if item is in the cart', (expect)=>{
+
+    const fakeCart = [
+        { id: '2', qty: 5 },
+        { id: '4', qty: 6 }
+    ];
+
+    localStorage.setItem('CART', JSON.stringify(fakeCart));
+    addItem('1');
+    const cart = getCart();
+    const expected = [
+        { id: '2', qty: 6 },
+        { id: '4', qty: 6 }
+    ];
+    expect.deepEqual(cart, expected);
+});
+
+test('addItem should add an item if its not already there', (expect) =>{
+ 
+    localStorage.removeItem('CART');
+    
+    const expected = [{ id: '1', qty: 1 }];
+    addItem('1');
+    const cart = getCart();
+    expect.deepEqual(cart, expected);
+
+});

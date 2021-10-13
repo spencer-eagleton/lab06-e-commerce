@@ -25,7 +25,7 @@ export function getCart(){
     const cart = JSON.parse(cartString);
     return cart;
 }
-// getCart
-    // get the cart from local storage
-    // parse it from JSON to javascript
-    // what if the cart doesn't exist yet?!?! -- return an empty array
+
+export function addItem(){
+    
+}
