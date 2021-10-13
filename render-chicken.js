@@ -21,7 +21,12 @@ export function renderChicken(chicken){
     const img = document.createElement('img');
     img.src = chicken.img;
 
-    chickenCard.append(img, chickenHeader);
+    const addButton = document.createElement('button');
+    addButton.textContent = 'Cluck it up!';
+    addButton.id = chicken.id;
+    addButton.classList.add('add-button');
+
+    chickenCard.append(img, chickenHeader, addButton);
     return chickenCard;
 
 }

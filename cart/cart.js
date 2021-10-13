@@ -1,8 +1,8 @@
 import { chickens } from '../chicken.js';
-import { cart } from '../data/cart-data.js';
 import { renderLineItem } from '../render-line-item.js';
-import { findById, calculateOrderTotal, toUSD } from '../utils.js';
+import { findById, calculateOrderTotal, toUSD, getCart } from '../utils.js';
 
+const cart = getCart();
 
 const tableBody = document.getElementById('table-body');
 for (let cartItem of cart){
@@ -18,3 +18,10 @@ for (let cartItem of cart){
 const orderTotal = calculateOrderTotal(cart, chickens);
 const tableDataOrderTotal = document.getElementById('total');
 tableDataOrderTotal.textContent = toUSD(orderTotal);
+
+const checkoutButton = document.getElementById('checkout-button');
+
+checkoutButton.addEventListener('click', ()=>{
+    localStorage.removeItem('CART');
+    window.location.replace('..');
+});
