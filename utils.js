@@ -18,3 +18,14 @@ export function calculateOrderTotal(cart, chickens) {
 export function toUSD(number){
     return number.toLocaleString('en-us', { style: 'currency', currency: 'USD' });
 }
+
+
+export function getCart(){
+    const cartString = localStorage.getItem('CART');
+    const cart = JSON.parse(cartString);
+    return cart;
+}
+// getCart
+    // get the cart from local storage
+    // parse it from JSON to javascript
+    // what if the cart doesn't exist yet?!?! -- return an empty array
