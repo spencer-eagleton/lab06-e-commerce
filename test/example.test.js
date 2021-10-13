@@ -67,7 +67,7 @@ test('addItem should add 1 to quantity if item is in the cart', (expect)=>{
     ];
 
     localStorage.setItem('CART', JSON.stringify(fakeCart));
-    addItem('1');
+    addItem('2');
     const cart = getCart();
     const expected = [
         { id: '2', qty: 6 },

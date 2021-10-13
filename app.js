@@ -1,6 +1,7 @@
 // import functions and grab DOM elements
 import { renderChicken } from './render-chicken.js';
 import { chickens } from './chicken.js';
+
 // initialize global state
 const chickenList = document.getElementById('chicken-list');
 
