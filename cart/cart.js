@@ -19,3 +19,9 @@ const orderTotal = calculateOrderTotal(cart, chickens);
 const tableDataOrderTotal = document.getElementById('total');
 tableDataOrderTotal.textContent = toUSD(orderTotal);
 
+const checkoutButton = document.getElementById('checkout-button');
+
+checkoutButton.addEventListener('click', ()=>{
+    localStorage.removeItem('CART');
+    window.location.replace('..');
+});
