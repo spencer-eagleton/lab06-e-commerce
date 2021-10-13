@@ -14,3 +14,7 @@ export function calculateOrderTotal(cart, chickens) {
     }
     return orderTotal;
 }
+
+export function toUSD(number){
+    return number.toLocaleString('en-us', { style: 'currency', currency: 'USD' });
+}

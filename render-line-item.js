@@ -1,3 +1,5 @@
+import { toUSD } from './utils.js';
+
 export function renderLineItem(cartItem, chickenData) {
     
     const tableRow = document.createElement('tr');
@@ -12,7 +14,8 @@ export function renderLineItem(cartItem, chickenData) {
     tableDataQty.textContent = cartItem.qty;
 
     const tableDataTotal = document.createElement('td');
-    tableDataTotal.textContent = cartItem.qty * chickenData.price;
+    const total = cartItem.qty * chickenData.price;
+    tableDataTotal.textContent = toUSD(total);
 
     tableRow.append(tableDataBreed, tableDataPrice, tableDataQty, tableDataTotal);
 
