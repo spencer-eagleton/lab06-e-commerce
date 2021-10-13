@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { renderChicken } from '../render-chicken.js';
+// import { renderChicken } from '../render-chicken.js';
 import { chickens } from '../chicken.js';
 import { findById, getCart, addItem } from '../utils.js';
 
