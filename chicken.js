@@ -6,7 +6,7 @@ export const chickens = [
         eggPerWeekAvg: '4',
         demeanor: 'exciteable',
         img: './assets/whitechicken.png',
-        price: 25.25},
+        price: 25.25 },
     {
         id: '2',
         breed: 'RI Red',
@@ -14,7 +14,7 @@ export const chickens = [
         eggPerWeekAvg: '3',
         demeanor: 'laid-back',
         img: './assets/redchicken.png',
-        price: 30.75},
+        price: 30.75 },
     
     {
         id: '3',
