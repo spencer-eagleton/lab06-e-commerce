@@ -1,7 +1,8 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { renderChicken } from '../render.js';
+import { renderChicken } from '../render-chicken.js';
 import { chickens } from '../chicken.js';
+import { findById } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -20,4 +21,20 @@ test('renderChicken better return HTML snippet', (expect) => {
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
+});
+
+test('findById should return item with corresponding id', (expect)=>{
+    
+    const expected = {
+        id: '5',
+        breed: 'Easter-Egger',
+        color: 'grey',
+        eggPerWeekAvg: '4',
+        demeanor: 'exciteable',
+        img: './assets/brownchicken.png',
+        price: 55
+    };
+
+    const actual = findById('5', chickens);
+    expect.deepEqual(actual, expected);
 });

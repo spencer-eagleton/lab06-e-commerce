@@ -1,0 +1,19 @@
+table {
+    border: 2px solid white;
+    margin: 10px;
+    border-collapse: collapse;
+    
+}
+thead {
+    background-color: rgb(245, 111, 111);
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px dotted white;
+    
+}
+
+body {
+    font-family: 'Roboto Slab';
+}
