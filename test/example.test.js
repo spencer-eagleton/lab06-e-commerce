@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { renderChicken } from '../render.js';
+import { renderChicken } from '../render-chicken.js';
 import { chickens } from '../chicken.js';
 import { findById } from '../utils.js';
 
@@ -31,7 +31,8 @@ test('findById should return item with corresponding id', (expect)=>{
         color: 'grey',
         eggPerWeekAvg: '4',
         demeanor: 'exciteable',
-        img: './assets/brownchicken.png'
+        img: './assets/brownchicken.png',
+        price: 55
     };
 
     const actual = findById('5', chickens);
