@@ -22,3 +22,8 @@ form {
     flex-direction: column;
     
 }
+button {
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+}
