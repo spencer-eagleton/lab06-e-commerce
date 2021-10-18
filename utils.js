@@ -53,3 +53,12 @@ export function getProducts(){
     }
     return products || chickens;
 }
+
+export function addProduct(newChicken){
+    let products = getProducts();
+    
+    products.push(newChicken);
+
+    let productsString = JSON.stringify(products);
+    localStorage.setItem('PRODUCTS', productsString);
+}
