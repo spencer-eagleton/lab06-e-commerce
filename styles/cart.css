@@ -17,3 +17,8 @@ table th, table td {
 body {
     font-family: 'Roboto Slab';
 }
+form {
+    display: flex;
+    flex-direction: column;
+    
+}

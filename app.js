@@ -1,10 +1,12 @@
 // import functions and grab DOM elements
 import { renderChicken } from './render-chicken.js';
-import { chickens } from './chicken.js';
-import { addItem } from './utils.js';
+
+import { addItem, getProducts } from './utils.js';
 
 // initialize global state
 const chickenList = document.getElementById('chicken-list');
+
+const chickens = getProducts();
 
 for (let chicken of chickens){
     const chickenCard = renderChicken(chicken);

@@ -1,8 +1,9 @@
-import { chickens } from '../chicken.js';
+
 import { renderLineItem } from '../render-line-item.js';
-import { findById, calculateOrderTotal, toUSD, getCart } from '../utils.js';
+import { findById, calculateOrderTotal, toUSD, getCart, getProducts } from '../utils.js';
 
 const cart = getCart();
+const chickens = getProducts();
 
 const tableBody = document.getElementById('table-body');
 for (let cartItem of cart){
