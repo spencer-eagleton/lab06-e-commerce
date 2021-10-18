@@ -15,7 +15,8 @@ const addButtons = document.getElementsByClassName('add-button');
 for (let addbutton of addButtons){
     addbutton.addEventListener('click', ()=>{
         addItem(addbutton.id);
-    
+
+
     });
 }
 // set event listeners 
