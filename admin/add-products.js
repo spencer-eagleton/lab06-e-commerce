@@ -13,5 +13,6 @@ form.addEventListener('submit', (e)=>{
 
     };
     addProduct(newChicken);
+    document.getElementById('new-product-form').reset();
     alert('Cluck! Cluck! New CLUCKER added!');
 });
