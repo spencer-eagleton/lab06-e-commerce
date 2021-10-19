@@ -3,12 +3,28 @@ img {
     max-width: 200px;
 }
 body {
-    text-align: center;
     background-color: rgb(231, 209, 162);
-    font-family: 'Grechen Fuemen', cursive;
+}
+main {
+    text-align: center;
+    
+    
+    font-family: 'roboto slab', serif;
     color: white;
     font-size: 30px;
     text-shadow: 2px 2px 5px grey;
+    background-image: url(../assets/dancingchicken.gif);
+    background-size: 150px;
+}
+
+h1 {
+    background-color: rgb(255, 65, 65);
+    width: fit-content;
+    margin: auto;
+    margin-top: 15px;
+    padding: 10px;
+    padding-top: 5px;
+    border: 5px outset;
 }
 
 #chicken-list {
@@ -16,6 +32,8 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    
+
 }
 
 .chicken-card {
@@ -35,3 +53,7 @@ body {
  button {
      border-radius: 60px;
  }
+
+#links {
+    margin: auto;
+}
