@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/cart.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <title>Admin</title>
+</head>
+<body>
+    <main>
+        <h1>Admin Page</h1>
+     
+        <form id="new-product-form">
+            <label>ID:
+                <input type="text" name="id">
+            </label>
+            <label>Breed:
+                <input type="text" name="breed">
+            </label>
+            <label>Color(s):
+                <select name="color">
+                    <option value="white">White</option>
+                    <option value="brown">Brown</option>
+                    <option value="red">Red</option>
+                    <option value="black">Black</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="various">Various</option>
+                    <option value="golden-brown">Golden-Brown</option>
+                </select>
+            </label>
+            <label>Eggs per week Average:
+                <input type="text" name="epwa">
+            </label>
+            <label>Demeanor
+                <select name="demeanor" >
+                    <option value="exciteable">Exciteable</option>
+                    <option value="laid-back">Laid-back</option>
+                    <option value="crispy">Crispy</option>
+                </select>
+            </label>
+            <label>IMG:
+                <input type="text" name="img">
+            </label>
+            <label>Price:
+                <input type="text" name="price">
+            </label>
+            <button>Add a chicken!</button>
+        </form>
+
+    </main>
+    <script type="module" src="./add-products.js"></script>
+</body>
+</html>

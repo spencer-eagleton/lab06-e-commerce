@@ -2,7 +2,7 @@
 // import { example } from '../example.js';
 // import { renderChicken } from '../render-chicken.js';
 import { chickens } from '../chicken.js';
-import { findById, getCart, addItem } from '../utils.js';
+import { findById, getCart, addItem, addProduct, getProducts } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -84,5 +84,24 @@ test('addItem should add an item if its not already there', (expect) =>{
     addItem('1');
     const cart = getCart();
     expect.deepEqual(cart, expected);
+
+});
+
+test('addProduct function should push new product to products array', (expect)=>{
+    let products = getProducts();
+    const newProduct = {
+        id: '6',
+        breed: 'Fried',
+        color: 'golden-brown',
+        eggPerWeekAvg: '0',
+        demeanor: 'crispy',
+        img: './assets/fried.png',
+        price: '10.75'
+
+    };
+    addProduct(newProduct);
+
+    products = getProducts();
+    expect.equal(products.length, 6);
 
 });

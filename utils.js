@@ -40,3 +40,25 @@ export function addItem(id){
     localStorage.setItem('CART', stringCart);
 
 }
+
+import { chickens } from './chicken.js';
+
+export function getProducts(){
+    let lsProducts = localStorage.getItem('PRODUCTS');
+    const products = JSON.parse(lsProducts);
+
+    if (!products){
+        const chickensString = JSON.stringify(chickens);
+        localStorage.setItem('PRODUCTS', chickensString);
+    }
+    return products || chickens;
+}
+
+export function addProduct(newChicken){
+    let products = getProducts();
+    
+    products.push(newChicken);
+
+    let productsString = JSON.stringify(products);
+    localStorage.setItem('PRODUCTS', productsString);
+}
